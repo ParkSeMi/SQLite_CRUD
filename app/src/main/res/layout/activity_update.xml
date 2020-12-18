@@ -21,25 +21,28 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:editable="false"
         />
     <EditText
         android:id="@+id/update_name"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:selectAllOnFocus="true"
         />
     <EditText
         android:id="@+id/update_major"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:selectAllOnFocus="true"
         />
     <EditText
         android:id="@+id/update_pw"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:selectAllOnFocus="true"
         />
     <Button
         android:layout_weight="1"

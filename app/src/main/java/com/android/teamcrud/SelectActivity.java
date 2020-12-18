@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -67,23 +68,40 @@ public class SelectActivity extends AppCompatActivity {
             Toast.makeText(SelectActivity.this, "Select Error!", Toast.LENGTH_SHORT).show();
         }
 
-
-
-
-        listView.setOnLongClickListener(new View.OnLongClickListener() {
-                Intent intent = null;
-            @Override
-            public boolean onLongClick(View v) {
-
-                return true;
-            }
-        });
-
-
-
-
+        listView.setOnItemLongClickListener(onItemLongClickListener);
+        listView.setOnItemClickListener(onItemClickListener);
 
     }
+
+        AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(), UpdateActivity.class);
+                intent.putExtra("id", data.get(position).getId());
+                intent.putExtra("username", data.get(position).getUsername());
+                intent.putExtra("major", data.get(position).getMajor());
+                intent.putExtra("passwd", data.get(position).getPasswd());
+
+                startActivity(intent);
+            }
+        };
+
+    AdapterView.OnItemLongClickListener onItemLongClickListener = new AdapterView.OnItemLongClickListener() {
+        @Override
+        public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+            Intent intent = new Intent(SelectActivity.this, DeleteActivity.class);
+            intent.putExtra("id", data.get(position).getId());
+            intent.putExtra("username", data.get(position).getUsername());
+            intent.putExtra("major", data.get(position).getMajor());
+            intent.putExtra("passwd", data.get(position).getPasswd());
+
+            startActivity(intent);
+
+            Toast.makeText(SelectActivity.this, "LongClick", Toast.LENGTH_SHORT).show();
+
+            return false;
+        }
+    };
 
     @Override
     protected void onResume() {

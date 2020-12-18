@@ -10,6 +10,7 @@ public class InsertActivity extends AppCompatActivity { //이강후 시작12/18
     private String major;
     private String passwd;
     // 123test
+    // 456test
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

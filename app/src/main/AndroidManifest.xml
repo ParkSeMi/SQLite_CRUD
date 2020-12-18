@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TeamCRUD">
-        <activity android:name=".DeleteActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".DeleteActivity" />
         <activity android:name=".UpdateActivity" />
         <activity android:name=".InsertActivity" />
         <activity android:name=".SelectActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

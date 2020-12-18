@@ -34,7 +34,7 @@ public class StudentAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return data.get(position).getId();
+        return data.get(position);
     }
 
     @Override
@@ -58,12 +58,12 @@ public class StudentAdapter extends BaseAdapter {
         tv_passwd.setText("비밀번호 : " + data.get(position).getPasswd());
 
         if(position % 2 == 1){
-            convertView.setBackgroundColor(0x5000ff00);
+            convertView.setBackgroundColor(0x90008080);
         }else {
-            convertView.setBackgroundColor(0x2000ff00);
+            convertView.setBackgroundColor(0x902e508d);
         }
         return convertView;
 
 
     }
-}
+}// 2020-12-18 16:30 조원 전체

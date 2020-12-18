@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1JO SQLite CRUD"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_weight="5"
+        />
+
+    <Button
+        android:id="@+id/btn_Insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I N S E R T"
+        android:layout_weight="1"
+        />
+    <Button
+        android:id="@+id/btn_Update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="U P D A T E"
+        android:layout_weight="1"
+        />
+    <Button
+        android:id="@+id/btn_Delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="D E L E T E"
+        android:layout_weight="1"
+        />
+    <Button
+        android:id="@+id/btn_Selectall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="S E L E C T  A L L"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>

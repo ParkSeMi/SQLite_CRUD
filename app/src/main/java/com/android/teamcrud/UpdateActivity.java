@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class UpdateActivity extends AppCompatActivity {  // 수정 차종한
+    // .idea/.name 체크
 
     final static String TAG = "Status";
 

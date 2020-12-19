@@ -18,7 +18,7 @@ public class UpdateActivity extends AppCompatActivity {  // 수정 차종한
     EditText update_id;
     EditText update_name;
     EditText update_major;
-    EditText update_pw;
+    EditText update_pw; // 변수형 TEXT 로 바꿔야함
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,17 +56,17 @@ public class UpdateActivity extends AppCompatActivity {  // 수정 차종한
         public void onClick(View v) {
             Studentinfo studentinfo = new Studentinfo(UpdateActivity.this);
             SQLiteDatabase DB = studentinfo.getWritableDatabase();
-
+            Log.v(TAG, "비밀번호는 : " + String.valueOf(update_pw.getText()));
             try {
                 DB = studentinfo.getWritableDatabase(); // 입력이라 writable
                 String query = "UPDATE student SET username = '" + update_name.getText().toString().trim() + "'," +
                         " major = '" + update_major.getText().toString().trim() + "'," +
-                        " passwd = '" + update_pw.getText().toString().trim() + "'" +
+                        " passwd = " + String.valueOf(update_pw.getText()).trim() + "" +
                         " WHERE id = '" + update_id.getText() + "';";
                 Log.v(TAG, query);
                 DB.execSQL(query);
 
-                studentinfo.close(); // memberInfo 종료
+                studentinfo.close(); // studentInfo 종료
                 Toast.makeText(UpdateActivity.this, "Update OK!", Toast.LENGTH_SHORT).show();
 
             }catch (Exception e){
@@ -74,6 +74,9 @@ public class UpdateActivity extends AppCompatActivity {  // 수정 차종한
                 Log.v(TAG, String.valueOf(e));
                 Toast.makeText(UpdateActivity.this, "Update Error!", Toast.LENGTH_SHORT).show();
             }
+
+            finish();
+
         }
     };
 }

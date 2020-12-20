@@ -11,21 +11,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     Button btn_Selectall, btn_Insert, btn_Update, btn_Delete;
-=======
-    Button btn_Selectall;
-    Button btn_Insert;
->>>>>>> kanghoo
-=======
-//<<<<<<< .merge_file_a02340
-    Button btn_Selectall, btn_Insert, btn_Update, btn_Delete;
-//=======
-//    Button btn_Selectall;
-//    Button btn_Insert;
-//>>>>>>> .merge_file_a10096
->>>>>>> test
+
     Intent intent;
 
     @Override
@@ -34,11 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btn_Selectall = findViewById(R.id.btn_Selectall);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-//<<<<<<< .merge_file_a02340
->>>>>>> test
+
         btn_Delete = findViewById(R.id.btn_Delete);
         btn_Insert = findViewById(R.id.btn_Insert);
         btn_Update = findViewById(R.id.btn_Update);
@@ -47,20 +31,12 @@ public class MainActivity extends AppCompatActivity {
         btn_Delete.setOnClickListener(mClickListener);
         btn_Insert.setOnClickListener(mClickListener);
         btn_Update.setOnClickListener(mClickListener);
-<<<<<<< HEAD
-=======
-=======
-//=======
->>>>>>> test
+
         btn_Insert = findViewById(R.id.btn_Insert); //이강후
 
         btn_Selectall.setOnClickListener(mClickListener);
         btn_Insert.setOnClickListener(mClickListener2); //합칠때 충돌방지하고자 아래 method를 따로 빼놓았습니다 이강후
-<<<<<<< HEAD
->>>>>>> kanghoo
-=======
-//>>>>>>> .merge_file_a10096
->>>>>>> test
+
     }
 
     View.OnClickListener mClickListener = new View.OnClickListener() {

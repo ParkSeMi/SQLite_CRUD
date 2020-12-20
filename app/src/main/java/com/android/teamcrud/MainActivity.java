@@ -54,10 +54,10 @@ public class MainActivity extends AppCompatActivity {
             break;
 
                 // insert 클릭 시 페이지 이동.
-                case R.id.btn_Insert:
-                    intent = new Intent(MainActivity.this, DeleteActivity.class);
-                    startActivity(intent);
-                    break;
+//                case R.id.btn_Insert:
+//                    intent = new Intent(MainActivity.this, DeleteActivity.class);
+//                    startActivity(intent);
+//                    break;
 
                 // Delete 클릭 시 Dialog
                 case R.id.btn_Delete:

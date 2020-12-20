@@ -36,7 +36,7 @@ public class DeleteActivity extends AppCompatActivity {
         deName.setText("이름 : "+intent.getStringExtra("username"));
         deMajor.setText("전공 : "+intent.getStringExtra("major"));
         String pass = Integer.toString(intent.getIntExtra("passwd", 0));
-        dePw.setText("전화 번호 : "+pass);
+        dePw.setText("비밀 번호 : "+pass);
 
 
         deButton.setOnClickListener(new View.OnClickListener() {

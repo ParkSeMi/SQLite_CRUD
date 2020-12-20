@@ -11,7 +11,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+<<<<<<< HEAD
     Button btn_Selectall, btn_Insert, btn_Update, btn_Delete;
+=======
+    Button btn_Selectall;
+    Button btn_Insert;
+>>>>>>> kanghoo
     Intent intent;
 
     @Override
@@ -20,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btn_Selectall = findViewById(R.id.btn_Selectall);
+<<<<<<< HEAD
         btn_Delete = findViewById(R.id.btn_Delete);
         btn_Insert = findViewById(R.id.btn_Insert);
         btn_Update = findViewById(R.id.btn_Update);
@@ -28,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
         btn_Delete.setOnClickListener(mClickListener);
         btn_Insert.setOnClickListener(mClickListener);
         btn_Update.setOnClickListener(mClickListener);
+=======
+        btn_Insert = findViewById(R.id.btn_Insert); //이강후
+
+        btn_Selectall.setOnClickListener(mClickListener);
+        btn_Insert.setOnClickListener(mClickListener2); //합칠때 충돌방지하고자 아래 method를 따로 빼놓았습니다 이강후
+>>>>>>> kanghoo
     }
 
     View.OnClickListener mClickListener = new View.OnClickListener() {
@@ -70,6 +82,16 @@ public class MainActivity extends AppCompatActivity {
             }
         } // 20.12.18 세미 메인에서 버튼 클릭 시 기능 추가
     };
+    //InsetActivity로 이동. 이강후
+    //합칠때 충돌을 우려해서 따로 만들었지만 합치는 사람이 다른 사람들것을 보고 위의 것과 합쳐되 됩니다.
+    View.OnClickListener mClickListener2 = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            intent = new Intent(MainActivity.this, InsertActivity.class);
+            startActivity(intent);
+        }
+    };
+
 
 
 } // -----
